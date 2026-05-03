@@ -1,0 +1,78 @@
+<ion-menu [content]="content" type="overlay" style="margin-top: 56px;">
+  <!-- <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-content dir="rtl">
+
+
+    <ion-list>
+      
+      <button menuClose ion-item (click)="OpenPage_Schedule()" > جدول المواعيد </button>
+      <button menuClose ion-item (click)="OpenPage_View_Doctor()">جدول الدكاترة</button>
+      <button menuClose ion-item (click)="OpenPage_View_Services()">جدول الخدمات</button>
+      <button menuClose ion-item (click)="OpenPage_View_Binding()">ربط الخدمات</button>
+      <button menuClose ion-item (click)="OpenPage_Offer_Page()">جديدنا</button>
+      <button menuClose ion-item (click)="OpenPage_ViewNotificationPage()">الإشعارات</button>
+      <button menuClose ion-item (click)="OpenPage_SettingsPage()">الإعدادات</button>
+
+    </ion-list>
+
+    <!-- <ion-list lines="none">
+      <button menuClose ion-item (click)="OpenPage_Schedule()">
+        <ion-icon item-left style="font-size:20px; color: #82607b;">
+          <ion-icon name="home" slot="start"></ion-icon>
+        </ion-icon>
+        <label style="float: right;">
+          جدول المواعيد
+        </label>
+      </button>
+
+      <button menuClose ion-item (click)="OpenPage_View_Doctor()">
+        <ion-icon item-left style="font-size:20px; color: #82607b;">
+          <ion-icon name="home" slot="start"></ion-icon>
+        </ion-icon>
+        <label style="float: right;">
+          جدول الدكاترة
+        </label>
+
+      </button>
+
+      <button menuClose ion-item (click)="OpenPage_View_Services()">
+        <ion-icon item-left style="font-size:20px; color: #82607b;">
+          <ion-icon name="home" slot="start"></ion-icon>
+        </ion-icon>
+        <label style="float: right;">
+          جدول الخدمات
+        </label>
+      </button>
+
+      <button menuClose ion-item (click)="OpenPage_View_Binding()">
+        <ion-icon item-left style="font-size:20px; color: #82607b;">
+          <ion-icon name="home" slot="start"></ion-icon>
+        </ion-icon>
+        <label style="float: right;">
+          ربط الخدمات
+        </label>
+      </button>
+
+      <button menuClose ion-item (click)="OpenPage_Offer()">
+        <ion-icon item-left style="font-size:20px; color: #82607b;">
+          <ion-icon name="home" slot="start"></ion-icon>
+        </ion-icon>
+        <label style="float: right;">
+          الإشعارات
+        </label>
+      </button>
+
+
+
+    </ion-list> -->
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <!-- <ion-title>add_binding</ion-title> -->
+    <ion-buttons end>
+      <button ion-button style="fill:  #9c4889" (click)="add_binding()">
+        <div>
+          <svg style="fill:  #9c4889" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            hideWhen="ios">
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M19 13v5c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1v-5c0-.55-.45-1-1-1s-1 .45-1 1v6c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6c0-.55-.45-1-1-1s-1 .45-1 1zm-6-.33l1.88-1.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-3.59 3.59c-.39.39-1.02.39-1.41 0L7.7 12.2c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L11 12.67V4c0-.55.45-1 1-1s1 .45 1 1v8.67z" />
+          </svg>
+          <br>
+          <label style="color: #9c4889">save</label>
+        </div>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="masters">
+
+  <ion-item dir="rtl">
+    <ion-label dir="rtl" style="color: #9c4889; font-weight: bold;">الخدمة :</ion-label>
+
+
+
+    <ion-input  dir="rtl" (keyup)="filter_service($event)" [(ngModel)]="service_name" type="text" >
+    </ion-input>
+    <ion-label  dir="rtl" style=" float: left;left: 20px;position: fixed;">
+      <ion-icon name="search"></ion-icon>
+    </ion-label>
+  </ion-item>
+
+  <ion-item dir="rtl">
+
+    <ion-label dir="rtl" style="color: #9c4889; font-weight: bold;">الدكتور :
+    </ion-label>
+    <!-- <ion-searchbar type="text" (ionInput)="filterItems($event)" [(ngModel)]="sss"></ion-searchbar> -->
+    <!-- <ion-input dir="ltr" (keyup)="filter_doctor($event)" [(ngModel)]="doctor_name" type="text" placeholder="بحث"> -->
+  
+      <ion-input dir="rtl" (keyup)="filter_doctor($event)" [(ngModel)]="doctor_name" type="text"
+
+      >
+
+    </ion-input>
+    <ion-label dir="lrt" style=" float: left;left: 20px;position: fixed;">
+      <ion-icon name="search"></ion-icon>
+    </ion-label>
+  </ion-item>
+
+  <ion-list *ngIf="mm">
+    <ion-item *ngFor="let item of filter_service_arr" (click)="select_service(item)">
+      {{item.name}}
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="mm2">
+    <ion-item *ngFor="let item of filter_doctor_arr" (click)="select_doctor(item)">
+      {{item.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

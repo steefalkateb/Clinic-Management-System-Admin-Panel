@@ -1,0 +1,118 @@
+
+
+<ion-header>
+  <ion-navbar>
+    <!-- <ion-title>view_service</ion-title> -->
+    <button ion-button menuToggle>
+      <ion-icon style="color:  #9c4889" name="menu"></ion-icon>
+    </button>
+
+    <ion-buttons end>
+      <button ion-button style="fill:  #757575" (click)="add_service()">
+        <div>
+          <svg style="color: #9c4889;" xmlns="http://www.w3.org/2000/svg" width="35" height="20" fill="currentColor"
+            class="bi bi-eye" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+          </svg>
+          <br>
+          <label style="color: #9c4889;font-weight: bold;">Add</label>
+        </div>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding class="masters" dir="rtl">
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col style="flex: 0 0 50px;padding:0;text-align: center;color: #f0f2f4;padding-top: 5px;display: flex;
+      align-items: center;
+      justify-content: center;">مــ</ion-col>
+
+      <ion-col style="flex: 0 0 50px;padding:0;text-align: center;color: transparent;padding-top: 5px;display: flex;
+      align-items: center;
+      justify-content: center;">مــ</ion-col>
+
+      <ion-col style="text-align: center;color: #f0f2f4;font-size: 18px;display: flex;
+      align-items: center;
+      justify-content: center;">اسم الخدمة</ion-col>
+      <ion-col style="text-align: center;color: #f0f2f4;font-size: 18px;display: flex;
+      align-items: center;
+      justify-content: center;">نوع الخدمة</ion-col>
+
+
+
+
+      <ion-col style="flex: 0 0 30px;padding:0;text-align: center;color: transparent;">
+        <button ion-button no-margin full large
+          style="color: transparent;  background-color: transparent;box-shadow: none !important;"
+        >
+          <ion-icon name="md-trash"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col style="flex: 0 0 30px;padding:0;text-align: center;color: transparent;">
+        <button ion-button no-margin full large
+          style="color: transparent;  background-color: transparent;box-shadow: none !important;"
+        >
+          <ion-icon name="md-trash"></ion-icon>
+        </button>
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row wrap *ngFor="let item of $items; index as i">
+      <ion-col style="flex: 0 0 50px;padding:0;text-align: center;display: flex;
+      align-items: center;
+      justify-content: center;">{{ i + 1 }}</ion-col>
+
+      <ion-col style="flex: 0 0 50px;padding:0;text-align: center;color: #f0f2f4;padding-top: 5px;display: flex;
+      align-items: center;
+      justify-content: center;"> <img src="assets/imgs/logo.png" width="50px" height="50px" data-src='{{item.image}}'>
+      </ion-col>
+
+      <ion-col style="text-align: center;font-size: 18px;display: flex;
+      align-items: center;
+      justify-content: center;">{{ item.name }}</ion-col>
+      <ion-col style="text-align: center;font-size: 18px;display: flex;
+      align-items: center;
+      justify-content: center;">{{ item.type }}</ion-col>
+
+
+
+      <ion-col style="flex: 0 0 30px;padding:0;text-align: center;color: transparent;">
+        <button no-margin ion-button full large
+          style="color: #757575; background-color: transparent;box-shadow: none !important;" (click)="edit_item(item)"
+          class="btn_col">
+          <ion-icon ios="ios-create" md="md-create"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col style="flex: 0 0 30px;padding:0;text-align: center;color: transparent;">
+        <button no-margin ion-button full large
+          style="color: #757575;  background-color: transparent;box-shadow: none !important;"
+          (click)="delete_item(item)" class="btn_col">
+          <ion-icon name="md-trash"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+
+
+
+  </ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

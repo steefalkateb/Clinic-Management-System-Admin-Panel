@@ -1,0 +1,171 @@
+<ion-header>
+  <ion-navbar>
+    <!-- <ion-title>add_service</ion-title> -->
+    <ion-buttons end>
+      <button ion-button style="fill:  #9c4889" (click)="add_service()">
+        <div>
+          <svg style="fill:  #9c4889" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            hideWhen="ios">
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M19 13v5c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1v-5c0-.55-.45-1-1-1s-1 .45-1 1v6c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6c0-.55-.45-1-1-1s-1 .45-1 1zm-6-.33l1.88-1.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-3.59 3.59c-.39.39-1.02.39-1.41 0L7.7 12.2c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L11 12.67V4c0-.55.45-1 1-1s1 .45 1 1v8.67z" />
+          </svg>
+          <br>
+          <label style="color: #9c4889">save</label>
+        </div>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="masters" style="background-color: #f5f5f5; text-align: center">
+
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6
+        style="background-color: #fbfbfb;border: 1px solid #b0b4b5; border-radius: 1%; ">
+
+        <div style="margin-top: 10px;">
+
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="items.name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Description 1</ion-label>
+            <ion-input type="text" maxlength="40" [(ngModel)]="items.desc1"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Description 2</ion-label>
+            <!-- <ion-input type="text"  [(ngModel)]="offers.desc2"></ion-input> -->
+            <ion-textarea [(ngModel)]="items.desc2"></ion-textarea>
+            <!-- stacked -->
+          </ion-item>
+          <ion-item style="width: 50%;float: left;">
+            <ion-label floating>Price</ion-label>
+            <ion-input type="number" maxlength="20" [(ngModel)]="items.price"></ion-input>    
+            <!-- stacked -->
+          </ion-item>
+          <ion-item style="width: 50%;float: right;">
+            <ion-label floating>Time</ion-label>
+            <ion-input type="text" maxlength="20" [(ngModel)]="items.time"></ion-input>    
+            <!-- stacked -->
+          </ion-item>
+          <ion-item>
+            <ion-label floating>type</ion-label>
+            <!-- <ion-input type="text" [(ngModel)]="offers.specialty"></ion-input> -->
+            <ion-select [(ngModel)]="items.type">
+              <ion-option>dermatophytes</ion-option>
+              <ion-option>digestive</ion-option>
+              <ion-option>glands_diabetes</ion-option>
+              <ion-option>thoracic_respiratory</ion-option>
+              <ion-option>cardiovascular</ion-option>
+              <ion-option>plastic_surgery</ion-option>
+              <ion-option>inpatient_clinic</ion-option>
+              <ion-option>other</ion-option>
+     
+            </ion-select>
+          </ion-item>
+
+        </div>
+
+      </ion-col>
+
+
+
+      <ion-col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 style="background-color: #ffffff;border: 2px dashed #9c4889;padding-top: 20px;  
+     float: right;right: 20px;
+     left: 20px;border-radius: 2px;">
+
+        <div>
+          <!-- <ion-label style="
+              margin: 0;
+              position: absolute;
+              top: 52%;
+              left: 50%;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); font-size: 20px;">Drop files here ...</ion-label> -->
+
+          <img [src]="path_image" />
+          <!-- https://www.joshmorony.com/multi-file-upload-with-ionic-angular-client-side/ -->
+          <!-- <button ion-button
+            style="
+              margin: 0;
+              position: absolute;
+              top: 88%;
+              left: 49%;
+              right: 50%;
+              font-size: 18px;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);          border: 2px solid #9c4889;background-color: transparent;box-shadow: none;color: #9c4889;"
+            onclick="document.getElementById('getFile').click()"> -->
+          <button ion-button style="
+              margin: 0;
+              position: absolute;
+              top: 88%;
+              left: 49%;
+              right: 50%;
+              font-size: 18px;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);border-radius: 25px;
+              background-color: #999;box-shadow: none;" onclick="document.getElementById('getFile').click()">
+            Browse File
+          </button>
+          <!-- <button full ion-button
+                style="display:block;text-transform: none;font-size: 20px;font-family:Arial; background-color: #9c4889"
+                onclick="document.getElementById('getFile').click()">
+                Browse
+              </button> -->
+          <input type="file" accept="image/*" id="getFile" style="display:none" (change)=fileChange($event)>
+        </div>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+
+<!-- <ion-content padding class="masters">
+
+  <ion-item dir="rtl">
+    <ion-label dir="rtl" style="color: #9c4889; font-weight: bold;">اسم الخدمة :</ion-label>
+      <ion-input dir="rtl" type="text" [(ngModel)]="items.name"></ion-input>
+  </ion-item>
+
+  <ion-item dir="rtl">
+
+    <ion-label dir="rtl" style="color: #9c4889; font-weight: bold;">نوع الخدمة :
+    </ion-label>
+ 
+      <ion-select style=" width:100%;
+      max-width: 93% !important;
+      padding-left:0px;" [(ngModel)]="items.specialty" >
+        <ion-option>القلبية</ion-option>
+        <ion-option>الهضمية</ion-option>
+        <ion-option>الجلدية والتجميل</ion-option>
+        <ion-option>الجراحة التجميلية</ion-option>
+        <ion-option>الجراحة العامة</ion-option>
+        <ion-option>البولية</ion-option>
+        <ion-option>التغذية</ion-option>
+        <ion-option>الكلية</ion-option>
+        <ion-option>الغدد</ion-option>
+        <ion-option>النسائية</ion-option>
+        <ion-option>الأطفال</ion-option>
+        <ion-option>الجراحة العصبية</ion-option>
+        <ion-option>العلاج الفيزيائي</ion-option>
+        <ion-option>الداخلية</ion-option>
+        <ion-option>أذن أنف حنجرة</ion-option>
+        <ion-option>الأوعية</ion-option>
+        <ion-option>الأشعة</ion-option>
+        <ion-option>العظمية</ion-option>
+        <ion-option>الصدرية والتنفسية</ion-option>
+        <ion-option>الألم المزمن</ion-option>
+        <ion-option>تخدير وانعاش</ion-option>
+      </ion-select>
+
+ 
+  </ion-item>
+
+
+</ion-content> -->
