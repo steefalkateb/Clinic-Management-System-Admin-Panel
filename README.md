@@ -1,6 +1,20 @@
 # Clinic-Management-System-Admin-Panel-
 The system allows adding, editing, and deleting services and doctors, managing pricing details, sending notifications, and organizing working hours.
 
+<table border="0">
+ <tr>
+    <td><b align="center">الصورة الأولى</b></td>
+    <td><b align="center">الصورة الثانية</b></td>
+ </tr>
+ <tr>
+    <td>
+      <img src="[رابط_الصورة_الأولى](https://github.com/steefalkateb/Clinic-Management-System-Admin-Panel-/blob/d7f24a52edc65eee4aaf9502dda42f83c968eb31/image1.jpeg)" width="400">
+    </td>
+    <td>
+      <img src="[رابط_الصورة_الثانية](https://github.com/steefalkateb/Clinic-Management-System-Admin-Panel-/blob/d7f24a52edc65eee4aaf9502dda42f83c968eb31/image1.jpeg)" width="400">
+    </td>
+ </tr>
+</table>
 ![Image Alt](https://github.com/steefalkateb/Clinic-Management-System-Admin-Panel-/blob/d7f24a52edc65eee4aaf9502dda42f83c968eb31/image1.jpeg)
 
 Technologies:
