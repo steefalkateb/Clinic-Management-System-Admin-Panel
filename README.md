@@ -8,7 +8,7 @@ The system allows adding, editing, and deleting services and doctors, managing p
       <img src="https://github.com/steefalkateb/Clinic-Management-System-Admin-Panel-/blob/d7f24a52edc65eee4aaf9502dda42f83c968eb31/image1.jpeg" width="400">
     </td>
     <td>
-      <img src="https://github.com/steefalkateb/Clinic-Management-System-Admin-Panel-/blob/d7f24a52edc65eee4aaf9502dda42f83c968eb31/image2.jpeg" width="400">
+      <img src="https://github.com/steefalkateb/Clinic-Management-System-Admin-Panel-/blob/30a6720f424ce78a5ea5ad18d2ad8b0207a2ebd5/image2.png" width="400">
     </td>
  </tr>
 </table>
