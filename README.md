@@ -1,25 +1,44 @@
-# Clinic-Management-System-Admin-Panel-
-The system allows adding, editing, and deleting services and doctors, managing pricing details, sending notifications, and organizing working hours.
+# 🏥 Clinic Management System – Admin Panel
 
-<table border="0">
+A web-based admin panel for managing clinic operations — built with Ionic & Angular.
 
- <tr>
-    <td>
-      <img src="https://github.com/steefalkateb/Clinic-Management-System-Admin-Panel-/blob/d7f24a52edc65eee4aaf9502dda42f83c968eb31/image1.jpeg" width="400">
-    </td>
-    <td>
-      <img src="https://github.com/steefalkateb/Clinic-Management-System-Admin-Panel-/blob/30a6720f424ce78a5ea5ad18d2ad8b0207a2ebd5/image2.png" width="400">
-    </td>
- </tr>
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td><img src="image1.jpeg" width="100%"></td>
+    <td><img src="image2.png" width="100%"></td>
+  </tr>
 </table>
 
+---
 
-Technologies:
+## ✨ Features
 
+- 👨‍⚕️ Add, edit, and delete doctors and medical staff
+- 🏥 Manage clinic services and categories
+- 💰 Pricing and package management
+- 🔔 Push notifications system
+- 🕐 Working hours and schedule management
 
-My Role:
+---
 
-* Designed and developed the management interface
-* Implemented CRUD operations (Add, Edit, Delete)
-* Managed services, doctors, and pricing system
-* Added notification and scheduling features
+## 🛠️ Technologies
+
+| Technology | Usage |
+|------------|-------|
+| Ionic | Frontend Framework |
+| Angular | UI Components |
+| TypeScript | Programming Language |
+| SCSS | Styling |
+| REST API | Backend Communication |
+| Laravel | Backend API |
+
+---
+
+## 👨‍💻 Developer
+
+**Mustafa Alkateb** — Software Developer · Web & Mobile  
+🔗 [github.com/steefalkateb](https://github.com/steefalkateb)
