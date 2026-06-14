@@ -8,8 +8,8 @@ A web-based admin panel for managing clinic operations — built with Ionic & An
 
 <table>
   <tr>
-    <td><img src="image1.jpeg" width="100%"></td>
-    <td><img src="image2.png" width="100%"></td>
+    <td><img src="image1.jpeg" width="400"></td>
+    <td><img src="image2.png" width="400"></td>
   </tr>
 </table>
 
